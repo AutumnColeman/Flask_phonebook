@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>New Student</h1>
+<form action="/submit_new_student" method="POST">
+  <p>
+    <label for="name">Name</label><br>
+    <input type="text" name="name">
+  </p>
+  <p>
+    <label for="website">Website</label><br>
+    <input type="text" size="60" name="website">
+  </p>
+  <p>
+    <label for="github_username">Github Username </label><br>
+    <input type="text" size="60" name="github_username">
+  </p>
+  <p>
+    <button type="submit">Add Student</button>
+  </p>
+</form>
+{% endblock %}

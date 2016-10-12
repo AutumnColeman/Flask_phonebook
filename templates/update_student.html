@@ -1,0 +1,24 @@
+
+
+      {% extends "layout.html" %}
+      {% block body %}
+      <h1>Update Student {{ student.name }}</h1>
+      <form action="/submit_update_student" method="POST">
+        <input type="hidden" name="id" value="{{student.id}}">
+        <p>
+          <label for="name">Name</label><br>
+          <input type="text" name="name" value="{{student.name}}">
+        </p>
+        <p>
+          <label for="website">Website</label><br>
+          <input type="text" size="60" name="website" value="{{student.website}}">
+        </p>
+        <p>
+          <label for="github_username">Github Username </label><br>
+          <input type="text" size="60" name="github_username" value="{{student.github_username}}">
+        </p>
+        <p>
+          <button type="submit">Update Student</button>
+        </p>
+      </form>
+      {% endblock %}
