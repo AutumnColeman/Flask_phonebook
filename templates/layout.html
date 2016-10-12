@@ -8,12 +8,11 @@
   </head>
   <body>
   <img class="phonepic" src="static/phone.png" alt="phone" />
+  <p class="main_title">Phonebook</p>
   <a href="/">Home</a>
   <a href="/new_entry">Add Entry</a>
     {% block body %}
-    <div class="title">
-      <h1>{{title}}</h1>
-    </div>
+      <h1 class="title">{{title}}</h1>
     <div class="list_phonebook">
         <ul>
           {% for entry in entry_list %}

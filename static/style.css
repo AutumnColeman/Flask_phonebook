@@ -4,16 +4,20 @@ body {
   font-family: 'Lobster', cursive;
   font-size: 18px;
 }
-h1 {
-  font-family: 'Lobster', cursive;
+.main_title {
+  /*font-family: 'Lobster', cursive;
   color: #282C34;
-  text-align: center;
+  text-align: center;*/
+  font-size: 55px;
+  display:inline-block;
+  margin: 0;
 }
 a {
   text-decoration: none;
   color: #282C34;
   font-family: 'Lobster', cursive;
   font-size: 19px;
+  padding: 5px;
 }
 a:hover {
   color: orange;
@@ -23,8 +27,10 @@ ul {
 }
 .title{
   background-color: orange;
-  width: 250px;
   border-radius: 100px;
+  font-family: 'Lobster', cursive;
+  color: #282C34;
+  text-align: center;
 }
 .phonepic {
   width: 85px;
