@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request, redirect
 import pg
 
 db = pg.DB(dbname='phonebook_v2')
