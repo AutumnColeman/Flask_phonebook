@@ -32,9 +32,9 @@ def submit_form():
     db.insert(
         'phonebook',
         name=name,
-        cell_phone=cell_phone,
-        home_phone=home_phone,
-        work_phone=work_phone,
+        cell_number=cell_phone,
+        home_number=home_phone,
+        work_number=work_phone,
         email=email)
     return redirect('/')
 

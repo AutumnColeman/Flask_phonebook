@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/style.css">
   </head>
   <body>
+  <img class="phonepic" src="static/phone.png" alt="phone" />
   <a href="/">Home</a>
   <a href="/new_entry">Add Entry</a>
     {% block body %}
-    <h1>{{title}}</h1>
-    <ul>
-      {% for entry in entry_list %}
-      <li>{{entry.name}}</li>
-      <li>{{entry.cell_number}}</li>
-      <li>{{entry.home_number}}</li>
-      <li>{{entry.work_number}}</li>
-      <li>{{entry.email}}</li>
-      &nbsp;
-      {% endfor %}
-    </ul>
+    <div class="title">
+      <h1>{{title}}</h1>
+    </div>
+    <div class="list_phonebook">
+        <ul>
+          {% for entry in entry_list %}
+          <li>{{entry.name}}</li>
+          <li>{{entry.cell_number}}</li>
+          <li>{{entry.home_number}}</li>
+          <li>{{entry.work_number}}</li>
+          <li>{{entry.email}}</li>
+          &nbsp;
+          {% endfor %}
+        </ul>
+      <div>
     {% endblock %}
   </body>
 </html>

@@ -1,0 +1,44 @@
+body {
+  background-color: #008080;
+  color: #282C34;
+  font-family: 'Lobster', cursive;
+  font-size: 18px;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #282C34;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #282C34;
+  font-family: 'Lobster', cursive;
+  font-size: 19px;
+}
+a:hover {
+  color: orange;
+}
+ul {
+  list-style-type: none;
+}
+.title{
+  background-color: orange;
+  width: 250px;
+  border-radius: 100px;
+}
+.phonepic {
+  width: 85px;
+}
+.add_entry {
+  text-align: center;
+}
+button {
+  background-color: orange;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  border-radius: 100px;
+  border: none;
+}
+.list_phonebook {
+  text-align: center;
+}
