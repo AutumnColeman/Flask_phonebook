@@ -13,18 +13,17 @@
   <a href="/new_entry">Add Entry</a>
     {% block body %}
       <h1 class="title">{{title}}</h1>
-    <div class="list_phonebook">
-        <ul>
+        <ul class="clear">
           {% for entry in entry_list %}
-          <li>{{entry.name}}</li>
-          <li>{{entry.cell_number}}</li>
-          <li>{{entry.home_number}}</li>
-          <li>{{entry.work_number}}</li>
-          <li>{{entry.email}}</li>
-          &nbsp;
+          <li>
+            Name: {{entry.name}}<br>
+            Cell: {{entry.cell_number}}<br>
+            Home: {{entry.home_number}}<br>
+            Work: {{entry.work_number}}<br>
+            Email: {{entry.email}}
+          </li>
           {% endfor %}
         </ul>
-      <div>
     {% endblock %}
   </body>
 </html>
