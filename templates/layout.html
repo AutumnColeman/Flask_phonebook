@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
   </head>
   <body>
+  <a href="/">Home</a>
+  <a href="/new_entry">Add Entry</a>
+    {% block body %}
     <h1>{{title}}</h1>
     <ul>
       {% for entry in entry_list %}
@@ -13,7 +17,9 @@
       <li>{{entry.home_number}}</li>
       <li>{{entry.work_number}}</li>
       <li>{{entry.email}}</li>
+      &nbsp;
       {% endfor %}
     </ul>
+    {% endblock %}
   </body>
 </html>
