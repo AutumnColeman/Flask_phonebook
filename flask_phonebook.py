@@ -6,18 +6,21 @@ app = Flask('Phonebook')
 
 @app.route('/')
 def main():
+    query = db.query('select * from phonebook')
+
     return render_template(
         'layout.html',
-        title='Phonebook',
+        title='Welcome',
+        entry_list=query.namedresult())
     # redirect('/new_entry')
 
-@app.route('/listings')
+@app.route('/listing')
 def list_all():
     query = db.query('select * from phonebook')
 
     return render_template(
-        'listings.html',
-        title='Phonebook Listings',
+        'listing.html',
+        title='Phonebook Entries',
         entry_list=query.namedresult())
 
 @app.route('/new_entry')
