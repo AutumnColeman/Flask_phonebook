@@ -10,20 +10,11 @@
   <img class="phonepic" src="static/phone.png" alt="phone" />
   <p class="main_title">Phonebook</p>
   <a href="/">Home</a>
+  <a href="/listings/">View Phonebook</a>
   <a href="/new_entry">Add Entry</a>
     {% block body %}
       <h1 class="title">{{title}}</h1>
-        <ul class="clear">
-          {% for entry in entry_list %}
-          <li>
-            Name: {{entry.name}}<br>
-            Cell: {{entry.cell_number}}<br>
-            Home: {{entry.home_number}}<br>
-            Work: {{entry.work_number}}<br>
-            Email: {{entry.email}}
-          </li>
-          {% endfor %}
-        </ul>
+          <h2>Welcome to Digital Phonebook!</h2>
     {% endblock %}
   </body>
 </html>

@@ -5,14 +5,20 @@ db = pg.DB(dbname='phonebook_v2')
 app = Flask('Phonebook')
 
 @app.route('/')
+def main():
+    return render_template(
+        'layout.html',
+        title='Phonebook',
+    # redirect('/new_entry')
+
+@app.route('/listings')
 def list_all():
     query = db.query('select * from phonebook')
 
     return render_template(
-        'layout.html',
-        title='Phonebook',
+        'listings.html',
+        title='Phonebook Listings',
         entry_list=query.namedresult())
-    # redirect('/new_entry')
 
 @app.route('/new_entry')
 def new_entry():
