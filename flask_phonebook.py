@@ -23,6 +23,33 @@ def list_all():
         title='Phonebook Entries',
         entry_list=query.namedresult())
 
+@app.route('/edit_entry')
+def edit_entry():
+    entry = request.args.get('id')
+
+    return render_template(
+        'edit_entry.html',
+        title='Update Entry'
+    )
+
+# @app.route('/submit_edit_entry', method=['POST'])
+# def submit_edit():
+#     name = request.form.get('name')
+#     cell_phone = request.form.get('cell_phone')
+#     home_phone = request.form.get('home_phone')
+#     work_phone = request.form.get('work_phone')
+#     email = request.form.get('email')
+#     db.update('phonebook', {
+#         'id': id,
+#         'name': name,
+#         'cell_number': cell_phone,
+#         'work_number': work_phone,
+#         'home_number': home_phone,
+#         'email': email
+#     })
+#
+#     return redirect('/')
+
 @app.route('/new_entry')
 def new_entry():
 
