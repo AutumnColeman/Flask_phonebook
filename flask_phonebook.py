@@ -25,30 +25,39 @@ def list_all():
 
 @app.route('/edit_entry')
 def edit_entry():
-    entry = request.args.get('id')
-
+    id = request.args.get('id')
+    query = db.query('''
+    select * from phonebook
+    where id = %s ''' % id)
     return render_template(
         'edit_entry.html',
-        title='Update Entry'
-    )
+        title='Update Entry',
+        entry = query.namedresult()[0]
+        )
 
-# @app.route('/submit_edit_entry', method=['POST'])
-# def submit_edit():
-#     name = request.form.get('name')
-#     cell_phone = request.form.get('cell_phone')
-#     home_phone = request.form.get('home_phone')
-#     work_phone = request.form.get('work_phone')
-#     email = request.form.get('email')
-#     db.update('phonebook', {
-#         'id': id,
-#         'name': name,
-#         'cell_number': cell_phone,
-#         'work_number': work_phone,
-#         'home_number': home_phone,
-#         'email': email
-#     })
-#
-#     return redirect('/')
+@app.route('/submit_edit_entry', methods=['POST'])
+def submit_edit():
+    id = request.form.get('id')
+    name = request.form.get('name')
+    cell_phone = request.form.get('cell_phone')
+    home_phone = request.form.get('home_phone')
+    work_phone = request.form.get('work_phone')
+    email = request.form.get('email')
+    if action == 'update':
+        action = request.form.get('action')
+        db.update('phonebook', {
+            'id': id,
+            'name': name,
+            'cell_number': cell_phone,
+            'work_number': work_phone,
+            'home_number': home_phone,
+            'email': email
+        })
+    elif action == 'delete':
+        db.delete('phonebook', { 'id': id })
+    else:
+        raise Exception("I don't understand %s" % action)
+    return redirect('/')
 
 @app.route('/new_entry')
 def new_entry():
