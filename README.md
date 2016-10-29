@@ -6,3 +6,5 @@ Phonebook app with Flask
 * Add entry
 * Edit entry 
 * Delete entry
+
+![alt text](https://github.com/AutumnColeman/Flask_phonebook/digitalpb_front.png "Front Page")
