@@ -7,8 +7,8 @@ Phonebook app with Flask
 * Edit entry 
 * Delete entry
 
-![Front Page](Flask_phonebook/digitalpb_front.png?raw=true "Front Page")
-![All Entries](https://github.com/AutumnColeman/Flask_phonebook/digitalpb_entries.png?raw=true "List Entries")
-![Add Entry](https://github.com/AutumnColeman/Flask_phonebook/digitalpb_add.png?raw=true "Add Entry")
-![Edit Entry](https://github.com/AutumnColeman/Flask_phonebook/digitalpb_edit.png?raw=true "Edit Entry")
+![Front Page](/digitalpb_front.png?raw=true "Front Page")
+![All Entries](/digitalpb_entries.png?raw=true "List Entries")
+![Add Entry](/digitalpb_add.png?raw=true "Add Entry")
+![Edit Entry](/digitalpb_edit.png?raw=true "Edit Entry")
 
