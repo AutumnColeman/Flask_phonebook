@@ -1,5 +1,5 @@
 # Flask_phonebook
-Phonebook app with Flask<br><br>
+####Phonebook app with Flask<br><br>
 <img src="/digitalpb_front.png?raw=true" alt="Front Page" width="400">
 ###Criteria:
 * List all entries 
