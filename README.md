@@ -7,8 +7,8 @@ Phonebook app with Flask
 * Edit entry 
 * Delete entry
 
-![Front Page](/digitalpb_front.png?raw=true "Front Page")
-![All Entries](/digitalpb_entries.png?raw=true "List Entries")
-![Add Entry](/digitalpb_add.png?raw=true "Add Entry")
-![Edit Entry](/digitalpb_edit.png?raw=true "Edit Entry")
+<img src="/digitalpb_front.png?raw=true" alt="Front Page" width="400">
+<img src="/digitalpb_add.png?raw=true" alt="Add Entry" width="400">
+<img src="/digitalpb_entries.png?raw=true" alt="List Entries" width="400">
+<img src="/digitalpb_edit.png?raw=true" alt="Edit Entry" width="400">
 
